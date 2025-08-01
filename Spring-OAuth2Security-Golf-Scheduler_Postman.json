@@ -1,0 +1,117 @@
+{
+  "info": {
+    "name": "Spring-OAuth2Security-Golf-Scheduler",
+    "schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+  },
+  "item": [
+    {
+      "name": "bruno",
+      "event": []
+    },
+    {
+      "name": "Resource_Server_GetLessons",
+      "event": [],
+      "request": {
+        "method": "GET",
+        "header": [],
+        "auth": {
+          "type": "bearer",
+          "bearer": {
+            "key": "token",
+            "value": "eyJraWQiOiI2NzhkNTMzYi1hNmJkLTQzY2YtODY3Zi0yNWQxODMyMmE0NWYiLCJhbGciOiJSUzI1NiJ9.eyJzdWIiOiJnb2xmLWNsaWVudCIsImF1ZCI6ImdvbGYtY2xpZW50IiwibmJmIjoxNzU0MDM3NDAxLCJpc3MiOiJodHRwOi8vbG9jYWxob3N0OjkwMDEiLCJleHAiOjE3NTQwMzc3MDEsImlhdCI6MTc1NDAzNzQwMSwianRpIjoiMTdlYWVkZGQtY2MwYS00YWEzLTkyMDgtNWI4YTMzMjU1NGUxIn0.G2FIaEs77WcZ77iHvjBYaeccjyM83lh9kR1PnyHuk6t6kvxhFPuD1feNxtHDvFuaLE2BHwzpdDT2uEHAccOl12tXNCRRhnH6pC7GLU_3_BKt1X6l1GMB8t1BGx4LQ3WDp7Ft1s2-f4lz1K3t83WmJ3_HYh61TlWbU_XCYlvQsRJk-ANNLYTslJHYE94syy9bKvpmK-BYQDIqchJ0e5Ow0FZ7VNFGLKnVgTESABpbXw4zrXptpXRrfW_fb2QqBTLr7Wz4P4rTq3a3mJDG96YA0nZYj-a-IKqfphHRCKNuo51wICMuL58A5hfsjwoXu_-yVvsW2biBS1hNBMLsQ7YZAA",
+            "type": "string"
+          }
+        },
+        "description": "",
+        "url": {
+          "raw": "http://localhost:8081/lessons",
+          "protocol": "http",
+          "host": [
+            "localhost:8081"
+          ],
+          "path": [
+            "lessons"
+          ],
+          "query": [],
+          "variable": []
+        }
+      }
+    },
+    {
+      "name": "GetToken_Golf-Client",
+      "event": [],
+      "request": {
+        "method": "POST",
+        "header": [
+          {
+            "key": "Content-Type",
+            "value": "application/x-www-form-urlencoded",
+            "disabled": false,
+            "type": "default"
+          }
+        ],
+        "auth": {
+          "type": "basic",
+          "basic": [
+            {
+              "key": "password",
+              "value": "golf-secret",
+              "type": "string"
+            },
+            {
+              "key": "username",
+              "value": "golf-client",
+              "type": "string"
+            }
+          ]
+        },
+        "description": "",
+        "url": {
+          "raw": "http://localhost:9001/oauth2/token",
+          "protocol": "http",
+          "host": [
+            "localhost:9001"
+          ],
+          "path": [
+            "oauth2",
+            "token"
+          ],
+          "query": [],
+          "variable": []
+        },
+        "body": {
+          "mode": "raw",
+          "raw": "grant_type=client_credentials",
+          "options": {
+            "raw": {
+              "language": "text"
+            }
+          }
+        }
+      }
+    },
+    {
+      "name": "Client_Application_GetLessons",
+      "event": [],
+      "request": {
+        "method": "GET",
+        "header": [],
+        "auth": null,
+        "description": "",
+        "url": {
+          "raw": "http://localhost:8080/lessons",
+          "protocol": "http",
+          "host": [
+            "localhost:8080"
+          ],
+          "path": [
+            "lessons"
+          ],
+          "query": [],
+          "variable": []
+        }
+      }
+    }
+  ],
+  "variable": []
+}

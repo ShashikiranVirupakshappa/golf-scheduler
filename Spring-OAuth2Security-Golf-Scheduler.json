@@ -1,0 +1,102 @@
+{
+  "name": "Spring-OAuth2Security-Golf-Scheduler",
+  "version": "1",
+  "items": [
+    {
+      "type": "http",
+      "name": "Resource_Server_GetLessons",
+      "seq": 2,
+      "request": {
+        "url": "http://localhost:8081/lessons",
+        "method": "GET",
+        "headers": [],
+        "params": [],
+        "body": {
+          "mode": "none",
+          "formUrlEncoded": [],
+          "multipartForm": []
+        },
+        "script": {},
+        "vars": {},
+        "assertions": [],
+        "tests": "",
+        "docs": "",
+        "auth": {
+          "mode": "bearer",
+          "bearer": {
+            "token": "eyJraWQiOiI2NzhkNTMzYi1hNmJkLTQzY2YtODY3Zi0yNWQxODMyMmE0NWYiLCJhbGciOiJSUzI1NiJ9.eyJzdWIiOiJnb2xmLWNsaWVudCIsImF1ZCI6ImdvbGYtY2xpZW50IiwibmJmIjoxNzU0MDM3NDAxLCJpc3MiOiJodHRwOi8vbG9jYWxob3N0OjkwMDEiLCJleHAiOjE3NTQwMzc3MDEsImlhdCI6MTc1NDAzNzQwMSwianRpIjoiMTdlYWVkZGQtY2MwYS00YWEzLTkyMDgtNWI4YTMzMjU1NGUxIn0.G2FIaEs77WcZ77iHvjBYaeccjyM83lh9kR1PnyHuk6t6kvxhFPuD1feNxtHDvFuaLE2BHwzpdDT2uEHAccOl12tXNCRRhnH6pC7GLU_3_BKt1X6l1GMB8t1BGx4LQ3WDp7Ft1s2-f4lz1K3t83WmJ3_HYh61TlWbU_XCYlvQsRJk-ANNLYTslJHYE94syy9bKvpmK-BYQDIqchJ0e5Ow0FZ7VNFGLKnVgTESABpbXw4zrXptpXRrfW_fb2QqBTLr7Wz4P4rTq3a3mJDG96YA0nZYj-a-IKqfphHRCKNuo51wICMuL58A5hfsjwoXu_-yVvsW2biBS1hNBMLsQ7YZAA"
+          }
+        }
+      }
+    },
+    {
+      "type": "http",
+      "name": "GetToken_Golf-Client",
+      "seq": 3,
+      "request": {
+        "url": "http://localhost:9001/oauth2/token",
+        "method": "POST",
+        "headers": [
+          {
+            "name": "Content-Type",
+            "value": "application/x-www-form-urlencoded",
+            "enabled": true
+          }
+        ],
+        "params": [],
+        "body": {
+          "mode": "text",
+          "text": "grant_type=client_credentials",
+          "formUrlEncoded": [],
+          "multipartForm": []
+        },
+        "script": {},
+        "vars": {},
+        "assertions": [],
+        "tests": "",
+        "docs": "",
+        "auth": {
+          "mode": "basic",
+          "basic": {
+            "username": "golf-client",
+            "password": "golf-secret"
+          }
+        }
+      }
+    },
+    {
+      "type": "http",
+      "name": "Client_Application_GetLessons",
+      "seq": 4,
+      "request": {
+        "url": "http://localhost:8080/lessons",
+        "method": "GET",
+        "headers": [],
+        "params": [],
+        "body": {
+          "mode": "none",
+          "formUrlEncoded": [],
+          "multipartForm": []
+        },
+        "script": {},
+        "vars": {},
+        "assertions": [],
+        "tests": "",
+        "docs": "",
+        "auth": {
+          "mode": "none"
+        }
+      }
+    }
+  ],
+  "environments": [],
+  "brunoConfig": {
+    "version": "1",
+    "name": "Spring-OAuth2Security-Golf-Scheduler",
+    "type": "collection",
+    "ignore": [
+      "node_modules",
+      ".git"
+    ]
+  }
+}
