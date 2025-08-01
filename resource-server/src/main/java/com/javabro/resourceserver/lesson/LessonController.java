@@ -12,6 +12,7 @@ import java.util.List;
 public class LessonController {
     @GetMapping("/lessons")
     public List<Lesson> getLessons() {
+        System.out.println("getLessons method called");
         Lesson lesson1 = new Lesson("Beginners Golf Basics", "An introduction to the fundamentals of golf", "John Doe",
                 LocalDateTime.of(2025, 7, 31, 10, 0));
         Lesson lesson2 = new Lesson("Advanced Swing Techniques", "Improve your swing with advanced techniques", "Jane Smith",
