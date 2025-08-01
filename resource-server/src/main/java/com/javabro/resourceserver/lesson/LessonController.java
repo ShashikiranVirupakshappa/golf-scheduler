@@ -17,8 +17,7 @@ public class LessonController {
                 LocalDateTime.of(2025, 7, 31, 10, 0));
         Lesson lesson2 = new Lesson("Advanced Swing Techniques", "Improve your swing with advanced techniques", "Jane Smith",
                 LocalDateTime.of(2025, 8, 1, 10, 0));
-
-
+        System.out.println(Arrays.asList(lesson1,lesson2));
         return Arrays.asList(lesson1,lesson2);
     }
 }
