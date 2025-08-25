@@ -1,0 +1,13 @@
+grant_type=client_credentials&client_id=golf-client&client_secret=golf-secret&scope=read
+
+
+
+
+curl -X POST http://localhost:9001/oauth2/token -H "Content-Type: application/x-www-form-urlencoded" -d "grant_type=client_credentials&client_id=golf-client&client_secret=golf-secret&scope=read"
+
+
+
+curl -X POST http://localhost:9001/oauth2/token -H "Content-Type: application/x-www-form-urlencoded" -u "golf-client:golf-secret" -d "grant_type=client_credentials"
+
+https://github.com/ShashikiranVirupakshappa/spring-boot-with-oauth2-security-golf-scheduler.git
+https://github.com/ShashikiranVirupakshappa/golf-scheduler.git
